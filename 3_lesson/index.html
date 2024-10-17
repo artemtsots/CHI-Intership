@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty Characters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background: linear-gradient(to right, rgba(79, 181, 254, 0.4), #ffffff);
+        }
+        #character-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .character {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+        .character:hover {
+            transform: scale(1.05);
+        }
+        img {
+            border-radius: 100px;
+            width: 100%;
+            height: auto;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #000bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #page-number {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Rick & Morty Characters</h1>
+<div id="character-list">Loading…</div>
+<div>
+    <button id="prev-button" disabled>Prev</button>
+    <span id="page-number">1</span>
+    <button id="next-button">Next</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
